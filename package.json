@@ -24,6 +24,7 @@
     "@electron-forge/maker-squirrel": "^6.0.4",
     "@electron-forge/maker-zip": "^6.0.4",
     "@electron-forge/plugin-webpack": "^6.0.4",
+    "@electron-forge/publisher-github": "^6.0.4",
     "@vercel/webpack-asset-relocator-loader": "1.7.3",
     "css-loader": "^6.0.0",
     "electron": "22.0.0",
@@ -32,5 +33,20 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0"
+  },
+  "config": {
+    "forge": {
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "mike-koala-bear",
+              "name": "electorn-app-folder"
+            }
+          }
+        }
+      ]
+    }
   }
 }
